@@ -29,11 +29,8 @@ const UpdateEmployee = () => {
   // pre-fetch
   useEffect(() => {
     const handlePretch = async () => {
-      // const res = await fetch(
-      //   `https://employees-api-kmv5.onrender.com/api/employees/get-employee/${id}`
-      // );
       const res = await fetch(
-        `http://localhost:2500/api/employees/get-employee/${id}`
+        `https://employees-api-kmv5.onrender.com/api/employees/get-employee/${id}`
       );
       const data = await res.json();
       setPreData(data);
@@ -50,17 +47,8 @@ const UpdateEmployee = () => {
   const handleUpdateEmployeeInfo = async (e) => {
     e.preventDefault();
     try {
-      // const res = await fetch(
-      //   `https://employees-api-kmv5.onrender.com/api/employees/update-employee/${id}`,
-      //   {
-      //     method: "PATCH",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify({ firstName, lastName, phone, email }),
-      //   }
       const res = await fetch(
-        `http://localhost:2500/api/employees/update-employee/${id}`,
+        `https://employees-api-kmv5.onrender.com/api/employees/update-employee/${id}`,
         {
           method: "PATCH",
           headers: {
@@ -77,6 +65,20 @@ const UpdateEmployee = () => {
     }
   };
   const updateFavorite = async (e) => {
+    try {
+      const res = await fetch(
+        `https://employees-api-kmv5.onrender.com/api/employees/update-employee/${id}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ firstName, lastName, phone, email, favorite }),
+        }
+      );
+    } catch (err) {
+      console.log(err);
+    }
     setFavorite(!favorite);
   };
 

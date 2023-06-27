@@ -11,28 +11,20 @@ const Home = () => {
     }
   }, []);
   // fecthing data using useFetch hook
-  // const {
-  //   data: employees,
-  //   loading,
-  //   error,
-  // } = useFetch(
-  //   "https://employees-api-kmv5.onrender.com/api/employees/get-employees"
-  // );
+
   const {
     data: employees,
     loading,
     error,
-  } = useFetch("http://localhost:2500/api/employees/get-employees");
+  } = useFetch(
+    "https://employees-api-kmv5.onrender.com/api/employees/get-employees"
+  );
 
   // handleRemoveEmployee
   const handleRemoveEmployee = async (id) => {
     try {
-      // const res = await fetch(
-      //   `https://employees-api-kmv5.onrender.com/api/employees/delete-employee/${id}`,
-      //   { method: "DELETE" }
-      // );
       const res = await fetch(
-        `http://2500/api/employees/delete-employee/${id}`,
+        `https://employees-api-kmv5.onrender.com/api/employees/delete-employee/${id}`,
         { method: "DELETE" }
       );
       if (res.ok) {

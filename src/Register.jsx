@@ -29,7 +29,7 @@ const Register = () => {
     setIsLoading(true);
     try {
       const res = await fetch(
-        "http://localhost:2500/api/auth/register-employer",
+        "https://employees-api-kmv5.onrender.com/api/auth/register-employer",
         {
           method: "POST",
           headers: {

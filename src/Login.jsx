@@ -22,11 +22,14 @@ const Login = () => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const res = await fetch("http://localhost:2500/api/auth/login-employer", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
+      const res = await fetch(
+        "https://employees-api-kmv5.onrender.com/api/auth/login-employer",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password }),
+        }
+      );
       const data = await res.json();
       console.log(data);
       if (res) {
