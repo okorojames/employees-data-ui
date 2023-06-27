@@ -232,6 +232,11 @@ tbody tr td {
   padding: 5px 20px;
   font-size: 16px;
 }
+.nav_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /*  */
 /*  */
 /*  */
@@ -300,4 +305,19 @@ tbody tr td {
 }
 .loading_gif {
   width: 50px;
+}
+/* media queries */
+@media screen and (max-width: 768px) {
+  .company_nav {
+    font-size: 60%;
+  }
+  .company_nav button {
+    font-size: 12px;
+  }
+  .register_section {
+    max-width: 95%;
+  }
+  .register_form {
+    max-width: 350px;
+  }
 }

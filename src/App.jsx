@@ -19,7 +19,7 @@ const App = () => {
   return (
     <>
       <div className="company_nav">
-        <p>Employee Infos</p>
+        <p className="nav_logo">Employee Infos</p>
         {loggedInUser ? (
           <button onClick={handleLogOut}>Logout</button>
         ) : (
