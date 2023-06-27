@@ -17,7 +17,6 @@ const Register = () => {
   const [phone, setPhone] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const [confirmPassword, setConfirmPassword] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -100,11 +99,6 @@ const Register = () => {
           type="password"
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
-        />
-        <input
-          type="confirm password"
-          placeholder="confirm password"
-          onChange={(e) => setConfirmPassword(e.target.value)}
         />
         <button className="register_btn">Register</button>
         <p className="register_footer">
