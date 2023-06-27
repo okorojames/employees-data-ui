@@ -285,6 +285,7 @@ tbody tr td {
   background: #6341cb;
 }
 .register_footer {
+  text-align: center;
   font-size: 14px;
 }
 .register_link {
@@ -319,5 +320,15 @@ tbody tr td {
   }
   .register_form {
     max-width: 350px;
+  }
+}
+@media screen and (max-width: 322px) {
+  .company_nav button:first-child {
+    margin-right: 0 !important;
+  }
+  .login_btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }
